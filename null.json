@@ -1,0 +1,18 @@
+{
+  "Weather": [
+    {
+      "temp": -2.0,
+      "pressure": 1018.0,
+      "humidity": 74.0,
+      "temp_min": -2.0,
+      "temp_max": -2.0,
+      "description": "broken clouds"
+    }
+  ],
+  "Town": [
+    "Koluszki"
+  ],
+  "Time": [
+    "22:48"
+  ]
+}

@@ -1,0 +1,7 @@
+.exitButton:hover {
+    
+  -fx-scale-y: 1.1;
+  -fx-scale-y: 1.1;
+
+  -fx-text-fill:red;
+}

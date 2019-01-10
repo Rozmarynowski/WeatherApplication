@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="279.0" prefWidth="434.0" style="-fx-background-color: #BFC5CC; -fx-border-color: #2f353f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ChartController">
+   <children>
+      <HBox layoutY="-2.0" prefHeight="288.0" prefWidth="434.0">
+         <children>
+            <VBox prefHeight="288.0" prefWidth="438.0">
+               <children>
+                  <HBox prefHeight="12.0" prefWidth="409.0">
+                     <children>
+                        <Button fx:id="tempBtn" mnemonicParsing="false" onAction="#pressTempBtn" prefHeight="27.0" prefWidth="94.0" style="-fx-border-color: #BFC5CC;" stylesheets="@../cssStyle/opensaveBtn.css" text="temperature">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="4.0" top="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="PressBtn" mnemonicParsing="false" onAction="#pressPressBtn" prefHeight="27.0" prefWidth="94.0" style="-fx-border-color: #BFC5CC;" stylesheets="@../cssStyle/opensaveBtn.css" text="pressure">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets top="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="humiBtn" mnemonicParsing="false" onAction="#pressHumiBtn" prefHeight="27.0" prefWidth="94.0" style="-fx-border-color: #BFC5CC;" stylesheets="@../cssStyle/opensaveBtn.css" text="humidity">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets top="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="chartClose" alignment="TOP_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#closeBtn" prefHeight="19.0" prefWidth="24.0" style="-fx-background-color: #BFC5CC;" styleClass="exitButton" stylesheets="@../cssStyle/exitBtnStyle.css" text="X" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="120.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="287.0" prefWidth="430.0" style="-fx-fit-to-height: true; -fx-fit-to-width: false;">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </VBox.margin>
+                     <content>
+                        <LineChart fx:id="chartWindow" alternativeColumnFillVisible="true" prefHeight="241.0" prefWidth="1000.0" style="-fx-background-color: #BFC5CC;" stylesheets="@../cssStyle/chartStyle.css">
+                          <xAxis>
+                            <CategoryAxis fx:id="yAxis" label="&#10;TIme [HH:mm]" prefHeight="41.0" prefWidth="953.0" side="RIGHT" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" fx:id="xAxis" />
+                          </yAxis>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </LineChart>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

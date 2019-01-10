@@ -1,0 +1,17 @@
+﻿.chart {
+  
+}
+
+.chart-content {
+     -fx-background-color: transparent;
+     -fx-stroke: #967373;
+}
+
+.axis-label {
+    -fx-text-fill:#00060f;
+}
+
+.chart-plot-background {
+    -fx-background-color:transparent;
+    -fx-legend-visible: false;
+}
